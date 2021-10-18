@@ -2,9 +2,11 @@ import { combineReducers, createStore, applyMiddleware } from "redux";
 import { logger } from "redux-logger";
 import thunk from "redux-thunk";
 import promise from "redux-promise-middleware";
-import authReducer from "./Component/auth-reducer";
+import authReducer from "./Component/Auth/auth-reducer";
+import skillReducer from "./Component/Skill/skill-reducer";
 const rootReducer = combineReducers({
   authReducer,
+  skillReducer,
 });
 
 const store =

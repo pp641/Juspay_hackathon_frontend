@@ -8,23 +8,22 @@ const authReducer = (
   action
 ) => {
   switch (action.type) {
-    case "LOGIN_SUCCESS":
-      return {
-        ...state,
-        loginDetails: action.payload,
-      };
     case "LOGIN_FAILED":
       return {
         ...state,
         loginFailedDetails: action.payload,
       };
-
-    case "SIGNUP_SUCCESS":
+    case "LOGIN_SUCCESS":
+      return {
+        ...state,
+        loginDetails: action.payload,
+      };
+    case "STUDENT_SIGNUP_SUCCESS":
       return {
         ...state,
         signupDetails: action.payload,
       };
-    case "SIGNUP_FAILED":
+    case "STUDENT_SIGNUP_FAILED":
       return {
         ...state,
         signupFailedDetails: action.payload,

@@ -5,7 +5,7 @@ import { TextField, Typography, Button } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import { createStudentAccount } from "./auth-action";
 
-export default function Signup() {
+export default function StudentSignup() {
   const dispatch = useDispatch();
   const store = useSelector((state) => state);
   const [formState, setFormState] = useState({
