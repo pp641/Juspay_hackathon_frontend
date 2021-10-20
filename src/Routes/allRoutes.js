@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "../Component/Auth/login";
 import Signup from "../Component/Auth/student-signup";
+import GetAllSkills from "../Component/Skill/get-All-Skills";
 const Routeslist = () => {
   return (
     <nav>

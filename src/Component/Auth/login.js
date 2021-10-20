@@ -4,8 +4,10 @@ import Grid from "@mui/material/Grid";
 import { TextField, Typography, Button } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import { login } from "./auth-action";
+import { useHistory } from "react-router-dom";
 
 export default function Login() {
+  const history = useHistory();
   const dispatch = useDispatch();
   const store = useSelector((state) => state);
   const [formState, setFormState] = useState({
@@ -24,6 +26,7 @@ export default function Login() {
   const handleLogin = (data) => {
     console.log("getting data", data);
     dispatch(login(data));
+    history.push("/");
   };
 
   return (

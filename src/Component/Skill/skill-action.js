@@ -16,3 +16,23 @@ export const fetchAllSkills = () => async (dispatch) => {
       });
     });
 };
+
+export const saveNewSkill = (data) => async (dispatch) => {
+  await axios
+    .post(`http://localhost:5000/api/addSkill`, {
+      body: data,
+    })
+    .then((result) => {
+      console.log(result.data);
+      dispatch({
+        type: "SAVE_NEW_SKILL_SUCCESS",
+        paylaod: result.data,
+      });
+    })
+    .catch((error) => {
+      dispatch({
+        type: "SAVE_NEW_SKILL_FAILED",
+        payload: error,
+      });
+    });
+};
